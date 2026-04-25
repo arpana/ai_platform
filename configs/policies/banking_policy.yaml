@@ -1,0 +1,25 @@
+environment: banking
+
+tool_rules:
+  allowed:
+    - loan_checker
+    - credit_score_lookup
+  denied:
+    - order_status
+    - recommendation_engine
+    - product_search
+
+pii_enforcement:
+  enabled: true
+  action: mask
+  patterns:
+    - name: ssn
+      regex: "\\b\\d{3}-\\d{2}-\\d{4}\\b"
+    - name: credit_card
+      regex: "\\b\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}\\b"
+    - name: account_number
+      regex: "\\b\\d{10,12}\\b"
+
+data_access:
+  restrict_external_apis: true
+  allowed_domains: []

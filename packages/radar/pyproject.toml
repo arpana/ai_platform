@@ -1,0 +1,17 @@
+[project]
+name = "ai-platform-radar"
+version = "0.1.0"
+description = "Tech Radar - technology governance and approval registry"
+requires-python = ">=3.11"
+dependencies = [
+    "ai-platform-core",
+    "pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai_platform.radar*"]

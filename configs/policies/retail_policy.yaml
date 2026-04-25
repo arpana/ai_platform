@@ -1,0 +1,23 @@
+environment: retail
+
+tool_rules:
+  allowed:
+    - order_status
+    - recommendation_engine
+    - product_search
+  denied:
+    - loan_checker
+    - credit_score_lookup
+
+pii_enforcement:
+  enabled: false
+  action: log
+  patterns:
+    - name: credit_card
+      regex: "\\b\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}\\b"
+
+data_access:
+  restrict_external_apis: false
+  allowed_domains:
+    - "api.products.internal"
+    - "api.recommendations.internal"

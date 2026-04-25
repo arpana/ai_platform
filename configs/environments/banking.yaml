@@ -1,0 +1,8 @@
+tools:
+  - loan_checker
+  - credit_score_lookup
+
+pii: strict
+rag_collection: banking_docs
+model: gpt-4o-mini
+max_agent_steps: 15

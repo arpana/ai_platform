@@ -1,0 +1,30 @@
+tools:
+  loan_checker:
+    status: approved
+    category: banking
+    notes: ""
+
+  credit_score_lookup:
+    status: approved
+    category: banking
+    notes: ""
+
+  order_status:
+    status: approved
+    category: retail
+    notes: ""
+
+  recommendation_engine:
+    status: approved
+    category: retail
+    notes: ""
+
+  product_search:
+    status: under_review
+    category: retail
+    notes: "Pending security review for external product API"
+
+  external_pricing_api:
+    status: stop
+    category: retail
+    notes: "Blocked - unapproved third-party dependency"

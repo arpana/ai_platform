@@ -1,0 +1,17 @@
+[project]
+name = "ai-platform-kairos"
+version = "0.1.0"
+description = "LLM Gateway - unified abstraction over LLM providers"
+requires-python = ">=3.11"
+dependencies = [
+    "ai-platform-core",
+    "langchain-openai>=0.2.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai_platform.kairos*"]

@@ -1,0 +1,9 @@
+tools:
+  - order_status
+  - recommendation_engine
+  - product_search
+
+pii: relaxed
+rag_collection: retail_docs
+model: gpt-4o-mini
+max_agent_steps: 20

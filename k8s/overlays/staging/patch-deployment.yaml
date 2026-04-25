@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-platform-api
+  namespace: ai-platform
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: ai-platform-api
+          env:
+            - name: AIP_LOG_LEVEL
+              value: "INFO"
+            - name: AIP_ENVIRONMENT
+              value: "banking"
+            - name: AIP_OTEL_ENABLED
+              value: "true"
